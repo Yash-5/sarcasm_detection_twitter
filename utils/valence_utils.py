@@ -14,5 +14,5 @@ def build_valence(filename="./Ratings_Warriner_et_al.csv"):
     valence_file = valence_file[1:]
     valence_rating = {}
     for entry in valence_file:
-        valence_rating[entry[1]] = (float(entry[29]), float(entry[32]))
+        valence_rating[entry[1]] = (float(entry[29]) + float(entry[32])) / 2
     return valence_rating
